@@ -5,6 +5,7 @@
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/akshay5995/powerbi-report-component?style=for-the-badge)
 
 It's a minimalistic React component for embedding a Microsoft PowerBI report or dashboard into your React application.
+This fork allows you to define a filter right in the Embed configuration before its creation. Check how to use below.
 
 ## Installation
 
@@ -113,6 +114,28 @@ _Callback passed to the onLoad or onRender prop_
   handleReportRender = (report) => {
     this.report = report; // get the report object from callback and store it.
   }
+
+  ...
+```
+
+_Use initialFilter attribute to add a filter in the configuration object_
+
+```
+  ...
+
+  // In render
+
+    <Report
+        embedType = 'report'
+        tokenType = 'Embed'
+        extraSettings = {extraSettings}
+        accessToken = {embedTokenReport}
+        embedUrl = {this.embedUrl}
+        embedId = {this.reportId}
+        onLoad = {this.handleReportLoad}
+        initialFilter = {this.powerBIData.filter}
+        permissions = 'All'
+    />
 
   ...
 ```

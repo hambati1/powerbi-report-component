@@ -16,6 +16,7 @@ const createConfig = props => {
       embedId,
       permissions,
       pageName,
+      initialFilter,
       extraSettings,
       dashboardId,
     } = props;
@@ -29,6 +30,7 @@ const createConfig = props => {
       pageName: pageName,
       dashboardId: dashboardId,
       permissions: models.Permissions[permissions],
+      filters: [initialFilter],
       settings: {
         filterPaneEnabled: true,
         navContentPaneEnabled: true,
@@ -121,6 +123,7 @@ Report.propTypes = {
   embedId: PropTypes.string.isRequired,
   pageName: PropTypes.string,
   extraSettings: PropTypes.object,
+  initialFilter: PropTypes.object,
   permissions: PropTypes.string.isRequired,
   onLoad: PropTypes.func,
   onSelectData: PropTypes.func,
