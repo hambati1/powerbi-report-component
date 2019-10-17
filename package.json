@@ -48,13 +48,13 @@
     "webpack-dev-server": "^3.8.0"
   },
   "author": {
-    "name": "Akshay Ram Vignesh A",
-    "email": "akshay5995@gmail.com"
+    "name": "Miquel Montalvo",
+    "email": "m@mmv.cat"
   },
-  "homepage": "http://akshay5995.github.io/powerbi-report-component",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akshay5995/powerbi-report-component"
+    "url": "https://github.com/mimov/powerbi-report-component"
   },
   "dependencies": {
     "np": "^5.1.1",
